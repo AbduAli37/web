@@ -24,7 +24,7 @@ import { CheckoutScreenProps } from "../types";
 import { ActionButton } from "../components/action-button";
 import { Types } from "../checkout.reducer";
 import { useCheckout } from "../checkout.context";
-import { CheckoutProductGroup } from "../components/checkout-product-group";
+// import { CheckoutProductGroup } from "../components/checkout-product-group";
 
 const DeliveryTime = dynamic(() =>
   import("../components/delivery-time").then((component) => ({ default: component.DeliveryTime }))
@@ -166,13 +166,13 @@ const CheckoutVerify = ({
         icon={<CalendarEventFillIcon />}
       />
       <h6 className="text-base font-semibold">{t("your.order")}</h6>
-      {data?.data?.user_carts?.map((userCart) => (
+      {/* {data?.data?.user_carts?.map((userCart) => (
         <div key={userCart.uuid} className="my-5 flex flex-col gap-4">
-          // {userCart?.cartDetails.map((detail) => (
-          //   <CheckoutProductGroup calcResult={cartTotal?.data} data={detail} key={detail.id} />
-          // ))}
+          {userCart?.cartDetails.map((detail) => (
+            <CheckoutProductGroup calcResult={cartTotal?.data} data={detail} key={detail.id} />
+          ))}
         </div>
-      ))}
+      ))} */}
       <CartTotal couponStyle={false} totals={cartTotal?.data} />
       <div className="flex items-center gap-4 mt-7">
         <IconButton onClick={onPrev} color="blackOutlined" size="xlarge">

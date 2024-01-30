@@ -17,7 +17,7 @@ const AuthComplete = dynamic(() => import("./components/complete"), {
 });
 
 const SignUp = () => {
-  const [currentView, setCurrentView] = useState<SignUpViews>("SIGNUP");
+  const [currentView, setCurrentView] = useState<SignUpViews>("COMPLETE");
   const [confirmationResult, setConfirmationResult] = useState<ConfirmationResult>();
   const [currentCredential, setCredential] = useState<string | undefined>();
   const handleChangeView = useCallback((view: SignUpViews) => setCurrentView(view), []);
