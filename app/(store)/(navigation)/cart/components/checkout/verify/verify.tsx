@@ -168,9 +168,9 @@ const CheckoutVerify = ({
       <h6 className="text-base font-semibold">{t("your.order")}</h6>
       {data?.data?.user_carts?.map((userCart) => (
         <div key={userCart.uuid} className="my-5 flex flex-col gap-4">
-          {userCart?.cartDetails.map((detail) => (
-            <CheckoutProductGroup calcResult={cartTotal?.data} data={detail} key={detail.id} />
-          ))}
+          // {userCart?.cartDetails.map((detail) => (
+          //   <CheckoutProductGroup calcResult={cartTotal?.data} data={detail} key={detail.id} />
+          // ))}
         </div>
       ))}
       <CartTotal couponStyle={false} totals={cartTotal?.data} />
